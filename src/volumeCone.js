@@ -4,11 +4,7 @@
  * @param {number} r - radius
  * @returns {number}
  */
-let h = 10;
-let r = 3;
 module.exports.volumeCone = function volumeCone(h, r) {
-  throw new Error('Not implemented');
+  let result = (1 / 3) * r ** 2 * h * Math.PI;
+  return result.toFixed(2);
 };
-let result = (1 / 3) * r ** 2 * h * Math.PI;
-//console.log(result); Test
-return result;

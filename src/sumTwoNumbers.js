@@ -4,11 +4,11 @@
  * @param {number|string} secondNumber
  * @returns {number}
  */
-let firstNumber = 5;
-let secondNumber = 8;
 module.exports.sumTwoNumbers = function sumTwoNumbers(firstNumber, secondNumber) {
-  throw new Error('Not implemented');
+  let preparedOneStr = firstNumber.toString().replaceAll(' ', '');
+  let preparedTwoStr = secondNumber.toString().replaceAll(' ', '');
+  let preparedOneFloat = parseFloat(preparedOneStr);
+  let preparedTwoFloat = parseFloat(preparedTwoStr);
+  let result = preparedOneFloat + preparedTwoFloat;
+  return result;
 };
-let result = firstNumber + secondNumber;
-//console.log(result); Test
-return result;

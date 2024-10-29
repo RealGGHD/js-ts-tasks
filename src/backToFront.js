@@ -4,13 +4,15 @@
  * @param {number} symbolsCount
  * @returns {string}
  */
-let str = 'house';
-let symbolsCount = 2;
 module.exports.backToFront = function backToFront(str, symbolsCount) {
-  throw new Error('Not implemented');
+  let result;
+  if (str.length > symbolsCount) {
+    let tempBack = str.slice(-1 * symbolsCount);
+    result = tempBack + str + tempBack;
+  } else if (str.length === symbolsCount) {
+    result = str + str + str;
+  } else {
+    result = str;
+  }
+  return result;
 };
-let tempFront = str.slice(0, symbolsCount);
-let tempBack = str.slice(-1 * symbolsCount);
-let result = tempFront + str + tempBack;
-console.log(result);
-return result;

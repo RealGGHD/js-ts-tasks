@@ -5,5 +5,12 @@
  * @returns {Object}
  */
 module.exports.removeItems = function removeItems(arr, value) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  let preparedValue = value.toString();
+  for (let i = 0; i < arr.length; i++) {
+    if (preparedValue === arr[i].toString()) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
+  return arr;
 };

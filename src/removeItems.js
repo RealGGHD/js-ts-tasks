@@ -5,9 +5,9 @@
  * @returns {Object}
  */
 module.exports.removeItems = function removeItems(arr, value) {
-  let preparedValue = value.toString();
+  let preparedValue = JSON.stringify(value);
   for (let i = 0; i < arr.length; i++) {
-    if (preparedValue === arr[i].toString()) {
+    if (preparedValue === JSON.stringify(arr[i])) {
       arr.splice(i, 1);
       i--;
     }

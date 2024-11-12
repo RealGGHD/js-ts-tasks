@@ -4,12 +4,16 @@
  * @returns {Object}
  */
 module.exports.getMaximalSequence = function getMaximalSequence(arr) {
-  let temp = 0;
+  let temp = [];
+  let result = [];
   for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[i] === arr[j]) {
-      }
+    if (arr[i] === arr[i + 1]) {
+      temp.push(arr[i]);
+    } else {
+      temp.push(arr[i]);
+      temp.length > result.length ? (result = temp) : null;
+      temp = [];
     }
   }
-  return resultArray;
+  return result;
 };

@@ -14,5 +14,29 @@
  * @returns {function}
  */
 module.exports.censorship = function censorship(forbidden) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  function cenco(input) {
+    for (let i = 0; i < forbidden.length; i++) {
+      for (let j = 0; j < input.length; j++) {
+        if (forbidden[i][0] === input[j] && forbidden[i].length === 1) {
+          input = input.slice(0, j) + '*' + input.slice(j + 1); //input[j] = "*";
+        } else if (forbidden[i][0] === input[j]) {
+          let x = j + 1;
+          let y = 1;
+          let temp = input[j];
+          while (input[x] === forbidden[i][y]) {
+            temp += input[x];
+            if (temp === forbidden[i]) {
+              input = input.slice(0, j) + '*'.repeat(forbidden[i].length) + input.slice(x + 1);
+              j += forbidden[i].length - 1;
+              break;
+            }
+            x++;
+            y++;
+          }
+        }
+      }
+    }
+    return input;
+  }
+  return cenco;
 };

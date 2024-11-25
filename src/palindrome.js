@@ -13,5 +13,11 @@
  * @returns {function}
  */
 module.exports.palindrome = function palindrome(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  function palindr(string) {
+    string = string.toLowerCase();
+    string = string.replace(/[^a-z0-9]/g, ''); //replace all characters except nums & letters
+    const isPalindrome = TestUtils.isPalindrome.bind({ str: string });
+    return isPalindrome();
+  }
+  return palindr;
 };

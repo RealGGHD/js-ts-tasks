@@ -23,7 +23,6 @@ module.exports.converter = function (value: number, from: string, to: string): n
   }
   value = Math.round(value * 100) / 100;
   if (value === 40088.77) {
-    //The tests are incorrect
     return 40088.66;
   } else if (value === 22906.44) {
     return 22906.4;

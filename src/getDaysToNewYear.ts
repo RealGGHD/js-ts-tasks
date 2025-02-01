@@ -6,7 +6,6 @@
 module.exports.getDaysToNewYear = function getDaysToNewYear(targetDate: Date | string): number {
   let day, month, year;
   let currentDate;
-  // Parse input date
   if (typeof targetDate === 'string') {
     [day, month, year] = targetDate.split('.').map(Number);
     currentDate = new Date(year, month - 1, day + 1);
@@ -14,10 +13,9 @@ module.exports.getDaysToNewYear = function getDaysToNewYear(targetDate: Date | s
     currentDate = new Date(targetDate);
   }
   currentDate.setHours(0, 0, 0, 0);
-  const newYearDate = new Date(2024, 0, 1); // 1st January 2024
+  const newYearDate = new Date(2024, 0, 1);
   newYearDate.setHours(0, 0, 0, 0);
-  const diffInMs = newYearDate - currentDate;
-  const daysLeft = Math.ceil(diffInMs / (1000 * 60 * 60 * 24));
-
-  return daysLeft;
+  const different = newYearDate - currentDate;
+  const toDays = Math.ceil(different / (1000 * 60 * 60 * 24));
+  return toDays;
 };

@@ -1,0 +1,100 @@
+/*Figma shows that the text font is "Source Sans Pro", but in Google Fonts this font is absolutely not similar to the picture. That is why I used "Source Sans 3", it is as similar as possible.*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+body {
+    background-color: #141D26;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 450;
+}
+
+.MainContainer {
+    width: 601px;
+    height: 228px;
+    border-radius: 10px;
+    background-color: #243447;
+    display: flex;
+    flex-direction: column;
+}
+.TopContainer {
+    width: 539px;
+    height: 50px;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-direction: row;
+    align-items: center;
+    gap: 270px;
+}
+.ProfileContainer {
+    width: 240px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+.NameContainer {
+    width: 200px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.Name {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-top: 1px;
+    font-weight: 700;
+}
+.Tag {
+    color: #FFFFFF;
+    opacity: 0.60;
+    font-size: 16px;
+    margin-top: -24px;
+    font-weight: 400;
+}
+.MiddleContainer {
+    width: 539px;
+    height: 52px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.Text {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-top: 7px;
+    font-weight: 400;
+}
+.Hashtags {
+    color: #1DA1F2;
+}
+.BottomContainer {
+    width: 232px;
+    height: 26px;
+    margin-left: 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.Like {
+    width: 24px;
+    height: 24px;
+}
+.NumberLikes {
+    color: #a8aeb4;
+    font-size: 16px;
+    padding-left: 5px;
+    margin-top: 2px;
+}
+.Date {
+    color: #FFFFFF;
+    opacity: 0.66;
+    font-size: 16px;
+    margin-top: 2px;
+    padding-left : 18px;
+}
+
